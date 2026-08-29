@@ -1,0 +1,112 @@
+{
+  "source": "Walker & Davies (1983), Appendix II worked example",
+  "inputs": {
+    "sigma_o_Pa": 400000000.0,
+    "E_Pa": 200000000000.0,
+    "R_m": 30.0,
+    "D_m": 0.45,
+    "d_m": 0.3,
+    "t_m": 0.02,
+    "mu": 0.3
+  },
+  "rows": [
+    {
+      "quantity": "Po (kN)",
+      "paper": 7540.0,
+      "ours": 7539.822368615503,
+      "note": "Outer diameter d, not mean diameter dm -- see module docstring",
+      "pct_diff": -0.002355853905790919
+    },
+    {
+      "quantity": "Mbar/Mp",
+      "paper": 0.97,
+      "ours": 0.9700690811049224,
+      "note": "Paper reads this off Fig. 10 / eq (5)",
+      "pct_diff": 0.007121763394064997
+    },
+    {
+      "quantity": "Stage I: L/d",
+      "paper": 32.7,
+      "ours": 32.46341869682202,
+      "note": "",
+      "pct_diff": -0.7234902237858871
+    },
+    {
+      "quantity": "Stage I: l1/d",
+      "paper": 12.6,
+      "ours": 12.6792860525827,
+      "note": "",
+      "pct_diff": 0.629254385576989
+    },
+    {
+      "quantity": "Stage I: tau (deg)",
+      "paper": 7.1,
+      "ours": 7.17608245640123,
+      "note": "",
+      "pct_diff": 1.0715838929750723
+    },
+    {
+      "quantity": "Stage I: P1/Po",
+      "paper": 0.022,
+      "ours": 0.02217170639508438,
+      "note": "Paper: 1.85e-3 (plasticity) + 20.0e-3 (friction)",
+      "pct_diff": 0.7804836140199205
+    },
+    {
+      "quantity": "Stage I: P1 (kN)",
+      "paper": 166.0,
+      "ours": 167.17072782803262,
+      "note": "",
+      "pct_diff": 0.705257727730497
+    },
+    {
+      "quantity": "Stage II: C1",
+      "paper": 125.0,
+      "ours": 125.0,
+      "note": "",
+      "pct_diff": 0.0
+    },
+    {
+      "quantity": "Stage II: C2",
+      "paper": 115.4,
+      "ours": 115.38461538461539,
+      "note": "",
+      "pct_diff": -0.013331555792564023
+    },
+    {
+      "quantity": "Stage II: l2/d",
+      "paper": 34.5,
+      "ours": 34.55817581880685,
+      "note": "",
+      "pct_diff": 0.1686255617589912
+    },
+    {
+      "quantity": "Stage II: P2/Po",
+      "paper": 0.0127,
+      "ours": 0.012920812266930554,
+      "note": "",
+      "pct_diff": 1.738679267169723
+    },
+    {
+      "quantity": "Stage III: Rp/d",
+      "paper": 166.7,
+      "ours": 166.66666666666666,
+      "note": "",
+      "pct_diff": -0.019996000799838896
+    },
+    {
+      "quantity": "Stage III: P'/Po (peak)",
+      "paper": 0.0092,
+      "ours": 0.009218512848270004,
+      "note": "Paper: coarse 3-point manual search (17.5/20/22.5); this module: fine scan, peak at l3/d=19.2",
+      "pct_diff": 0.20122661163048508
+    },
+    {
+      "quantity": "Stage III: P_III/Po",
+      "paper": 0.0219,
+      "ours": 0.02213932511520056,
+      "note": "",
+      "pct_diff": 1.0928087452080342
+    }
+  ]
+}

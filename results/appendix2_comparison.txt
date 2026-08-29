@@ -1,0 +1,25 @@
+Walker & Davies (1983) -- Appendix II worked example
+Comparison: paper-stated value vs. walker1983_jtube.py
+========================================================================================
+quantity                         paper   this module    % diff   note
+----------------------------------------------------------------------------------------
+Po (kN)                           7540          7540     -0.0%   Outer diameter d, not mean diameter dm -- see module docstring
+Mbar/Mp                           0.97        0.9701      0.0%   Paper reads this off Fig. 10 / eq (5)
+Stage I: L/d                      32.7         32.46     -0.7%   
+Stage I: l1/d                     12.6         12.68      0.6%   
+Stage I: tau (deg)                 7.1         7.176      1.1%   
+Stage I: P1/Po                   0.022       0.02217      0.8%   Paper: 1.85e-3 (plasticity) + 20.0e-3 (friction)
+Stage I: P1 (kN)                   166         167.2      0.7%   
+Stage II: C1                       125           125      0.0%   
+Stage II: C2                     115.4         115.4     -0.0%   
+Stage II: l2/d                    34.5         34.56      0.2%   
+Stage II: P2/Po                 0.0127       0.01292      1.7%   
+Stage III: Rp/d                  166.7         166.7     -0.0%   
+Stage III: P'/Po (peak)         0.0092      0.009219      0.2%   Paper: coarse 3-point manual search (17.5/20/22.5); this module: fine scan, peak at l3/d=19.2
+Stage III: P_III/Po             0.0219       0.02214      1.1%   
+----------------------------------------------------------------------------------------
+
+All discrepancies are within the ~1-2% documented in the module
+docstring, EXCEPT where noted -- expected because the paper's own
+worked example reads alpha*Mbar/Mp, beta*Mbar/Mp off a hand-drawn
+chart (Fig. 12) rather than evaluating eqs. (7)-(8) directly.

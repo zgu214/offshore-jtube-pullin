@@ -1,0 +1,11 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Source papers -- copyrighted published journal/conference papers
+# (ASME, OTC, OMAE). Never commit these, private repo or not.
+*.pdf
+
+# Local HTML export, not part of the repo's own docs
+readme.html
