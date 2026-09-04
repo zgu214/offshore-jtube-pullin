@@ -1,4 +1,63 @@
-# J-tube pull-in analysis
+# Offshore J-tube Pull-in Analysis
+
+Python research tools for estimating J-tube pull-in behavior using two different physical models: Walker & Davies for rigid-pipe bending and Ronalds for flexible-umbilical friction. A combined desktop interface provides both methods and a regime classifier.
+
+**Zhiqiang Gu · zhiqiang.gu214@gmail.com**  
+Independent personal project, unrelated to my employer or my work for any company.
+
+## Install and launch
+
+```shell
+git clone https://github.com/zgu214/offshore-jtube-pullin.git
+cd offshore-jtube-pullin
+python -m venv .venv
+```
+
+Activate with `.venv\Scripts\Activate.ps1` in Windows PowerShell, or `source .venv/bin/activate` on macOS/Linux. Then:
+
+```shell
+python -m pip install numpy matplotlib pytest
+python -m tkinter
+python scripts/combined_gui.py
+```
+
+The Tkinter command opens a small test window; close it before launching the main GUI. Tkinter is supplied with many Python installations, but some systems require it to be installed through the operating-system package manager. The GUI needs a graphical desktop.
+
+## Typical workflow
+
+1. Open the combined GUI and choose the Walker, Ronalds or Regime Classifier tab.
+2. Read the input labels and units, then enter geometry, material and friction inputs for the selected method.
+3. Compute and inspect the loads and plots.
+4. Use the regime classifier to examine whether the contact assumptions are appropriate. The **Use Walker tab's P1** button transfers the computed Walker Stage I load.
+5. Interpret results within the method-specific limitations below. A regime check is not a design-code acceptance check.
+
+Standalone launchers are `python scripts/walker1983_gui.py` and `python scripts/ronalds1992_gui.py`.
+
+## Examples and tests
+
+From the repository root:
+
+```shell
+python scripts/walker1983_jtube.py
+python scripts/ronalds1992_jtube.py
+python scripts/regime_classifier.py
+```
+
+Run the tests from the scripts directory so the sibling modules are importable:
+
+```shell
+cd scripts
+python -m pytest test_walker1983.py test_ronalds1992.py test_regime_classifier.py -v
+```
+
+The detailed notes below describe benchmark comparisons and unresolved source interpretations. These are not a certification of fitness for a specific offshore installation.
+
+## Interface previews
+
+[Combined interface](scripts/Combined.PNG) · [Walker interface](scripts/walkerGui.PNG) · [Ronalds interface](scripts/RonaldGui.PNG)
+
+## Technical documentation
+
 
 Python reproductions of two J-tube pull-in design methods:
 
@@ -84,7 +143,7 @@ J_tube_2026/
 │   ├── fig5_stage1_contact_distances.png
 │   ├── fig7_stage1_pullin_load.png
 │   └── appendix2_marker_on_design_curve.png
-└── *.pdf                              source papers (see "Other papers" below)
+└── README.md                          installation and technical notes
 ```
 
 ## Quick start
@@ -265,3 +324,8 @@ README or the code to follow.
 
 MIT -- see [LICENSE](LICENSE). Free to use, modify, and redistribute,
 with attribution.
+
+
+## Maintainer and license
+
+[Zhiqiang Gu](https://www.linkedin.com/in/zhiqiang-gu-55813318/) · [zhiqiang.gu214@gmail.com](mailto:zhiqiang.gu214@gmail.com). Code is provided under the [MIT License](LICENSE); publication and dependency rights are separate.
